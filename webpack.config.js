@@ -1,8 +1,8 @@
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  // mode:'development',
   entry: "./src/index.js", // 리액트 파일이 시작하는 곳(webpack4부터 생략가능 === 기본이 ./src/index.js)
   output: {
     path: __dirname + "/dist",
@@ -16,26 +16,22 @@ module.exports = {
         use: ["babel-loader"],
       },
       {
-        test: /\.css$/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-            options: {
-              modules: true,
-              // camelCase: true,
-              sourceMap: true,
-            },
-          },
-        ],
+        test: /\.scss$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.png|\.jpg$/,
+        use: ["file-loader"],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css",
+      chunkFilename: "[id].[contenthash].css",
     }),
   ],
   devServer: {

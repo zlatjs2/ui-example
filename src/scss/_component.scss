@@ -1,0 +1,126 @@
+/// 썸네일 이미지
+.thumbnail {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-color: $grey50;
+}
+
+/// 별점 아이템
+.rating {
+  display: inline-block;
+  vertical-align: middle;
+  i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: $spacing / 4;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    background-color: $grey100;
+  }
+}
+
+/// 결과 없음 화면
+.no-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  .text-secondary {
+    font-size: 1rem;
+  }
+}
+
+/// 카드 리스트
+.card-list {
+  font-size: 0;
+  padding: 0 $spacing / 2;
+}
+.card-item {
+  display: inline-block;
+  width: calc(50% - 8px);
+  min-height: 340px;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: $spacing / 2;
+  border: 1px solid $grey200;
+  border-radius: $spacing / 2;
+  span,
+  em,
+  strong {
+    display: block;
+  }
+  @include element("thumbnail") {
+    padding-bottom: 100%;
+  }
+  @include element("info") {
+    position: relative;
+    padding: $spacing;
+    .text-primary {
+      @include text-overflow-multi(40px, 2);
+    }
+    em {
+      min-height: 40px;
+    }
+    del {
+      position: absolute;
+      right: $spacing;
+      bottom: $spacing + 2;
+    }
+  }
+  @include element("rating") {
+    min-height: 32px;
+    padding: $spacing;
+    border-top: 1px solid $grey200;
+    .text-secondary {
+      @include text-overflow;
+    }
+    .rating {
+      margin-bottom: $spacing / 2;
+    }
+    .writer {
+      display: none;
+    }
+  }
+}
+
+@include mobile {
+  .img-card {
+    width: 100px;
+  }
+}
+
+@include tablet {
+  .card-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 150px;
+    min-height: 150px;
+    margin: 0 0 $spacing 0;
+    @include element("thumbnail") {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0;
+      width: 150px;
+      height: 150px;
+    }
+    @include element("rating") {
+      border-top: 0 none;
+      .rating {
+        margin-bottom: 0;
+      }
+      .writer {
+        display: inline-block;
+        line-height: 1;
+        margin-left: $spacing;
+        padding-left: $spacing;
+        border-left: 1px solid $grey100;
+      }
+    }
+  }
+}

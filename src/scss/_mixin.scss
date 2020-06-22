@@ -1,0 +1,85 @@
+/// 믹스인
+
+/// 이미지로 대체할 엘리먼트에 배경이미지를 설정하고
+/// 텍스트를 바깥으로 빼내어 보이지 않게 함
+@mixin ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/// 이미지로 대체할 엘리먼트에 배경이미지를 설정하고
+/// z-index를 이용하여 글씨는 화면에 안보이게 처리
+@mixin ir-wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin sc-out {
+  overflow: hidden;
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+@mixin clearFix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+@mixin text-overflow-multi($maxHeight, $line) {
+  max-height: $maxHeight;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+@mixin elementType($elementType) {
+  &-#{$elementType} {
+    @content;
+  }
+}
+
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
