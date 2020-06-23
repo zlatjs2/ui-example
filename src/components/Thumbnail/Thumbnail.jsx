@@ -3,11 +3,13 @@ import defaultImageUrl from "../../images/default-image.png";
 
 const Thumbnail = ({ url, alt, className }) => {
   return (
-    <span
+    <a
+      href="#"
       className={`thumbnail ${className}`}
       style={{ backgroundImage: `url(${url}), url(${defaultImageUrl})` }}
-      data-label={alt}
-    ></span>
+    >
+      <span className="ir-pm">{alt}</span>
+    </a>
   );
 };
 

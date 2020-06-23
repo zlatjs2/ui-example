@@ -1,5 +1,13 @@
+.ir-pm {
+  @include ir-pm;
+}
+
 .sc-out {
   @include sc-out;
+}
+
+.ir-wa {
+  @include ir-wa;
 }
 
 .container {
