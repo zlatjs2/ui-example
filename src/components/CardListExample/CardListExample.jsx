@@ -63,9 +63,9 @@ const items = [
 const CardListExample = () => {
   return (
     <article>
-      <h2 className="sc-out">추천 상품 페이지</h2>
+      <h2 className="sc-out">카드 리스트 UI 페이지</h2>
       <section>
-        <h3 className="page-title">추천 상품 리스트</h3>
+        <h3 className="page-title">카드 리스트</h3>
         {items.length !== 0 && items ? (
           <ul className="card-list">
             {items.map((item, idx) => (
