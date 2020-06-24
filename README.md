@@ -28,3 +28,15 @@ UI 예제 테스트
   npm install --save-dev @babel/core babel-loader @babel/preset-react @babel/preset-env
   npm install --save-dev webpack webpack-dev-server webpack-cli html-webpack-plugin
 ```
+
+3. 개발 서버 시작
+
+```
+npm run start
+```
+
+4. 프로젝트 빌드
+
+```
+npm run build
+```
