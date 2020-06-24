@@ -14,9 +14,37 @@
   @include ir-wa;
 }
 
+.header {
+  padding: 0 $spacing * 2;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 768px;
+  height: 60px;
+  margin: 0 auto;
+  @include element("link") {
+    width: 100%;
+    margin-bottom: -2px;
+    padding: $spacing * 2 $spacing;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-bottom: 2px solid $white;
+    &.active {
+      border-color: $color-primary;
+    }
+  }
+}
+
 .container {
   max-width: 768px;
   margin: 0 auto;
+  padding: $spacing * 2 $spacing;
 }
 
 .page-title {

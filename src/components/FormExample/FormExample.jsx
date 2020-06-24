@@ -48,8 +48,8 @@ const FormExample = () => {
                 disabled
               />
             </div>
+
             <div className="form__item">
-              <label htmlFor="readOnlyTextarea">읽기전용</label>
               <TextField
                 id="readOnlyTextarea"
                 label="ReadOnly"
