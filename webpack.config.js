@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: "./src/index.js", // 리액트 파일이 시작하는 곳(webpack4부터 생략가능 === 기본이 ./src/index.js)
   output: {
-    path: __dirname + "/dist",
+    path: __dirname + "/build",
     filename: "bundle.[hash].js", // [hash]는 컴파일될 때마다 웹팩에서 생성된 해시로 변경해주어 캐싱에 도움
   },
   module: {
