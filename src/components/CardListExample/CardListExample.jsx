@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ImageUrl0 from "../../images/sample0.jpg";
 import ImageUrl1 from "../../images/sample1.jpg";
 import ImageUrl3 from "../../images/sample3.jpg";
@@ -60,34 +60,32 @@ const items = [
   },
 ];
 
-const CardListExample = () => {
-  return (
-    <article>
-      <h2 className="sc-out">카드 리스트 UI 페이지</h2>
-      <section>
-        <h3 className="page-title">카드 리스트</h3>
-        {items.length !== 0 && items ? (
-          <ul className="card-list">
-            {items.map((item, idx) => (
-              <CardItem
-                key={idx}
-                title={item.title}
-                label={item.label}
-                hilight={item.hilight}
-                thumbnail={item.thumbnail}
-                price={item.price}
-                comment={item.comment}
-                score={item.score}
-                writer={item.writer}
-              />
-            ))}
-          </ul>
-        ) : (
-          <NoResult message="추천 상품이 없습니다." />
-        )}
-      </section>
-    </article>
-  );
-};
+const CardListExample = () => (
+  <article>
+    <h2 className="sc-out">카드 리스트 UI 페이지</h2>
+    <section>
+      <h3 className="page-title">카드 리스트</h3>
+      {items.length !== 0 && items ? (
+        <ul className="card-list">
+          {items.map((item, idx) => (
+            <CardItem
+              key={idx}
+              title={item.title}
+              label={item.label}
+              hilight={item.hilight}
+              thumbnail={item.thumbnail}
+              price={item.price}
+              comment={item.comment}
+              score={item.score}
+              writer={item.writer}
+            />
+          ))}
+        </ul>
+      ) : (
+        <NoResult message="추천 상품이 없습니다." />
+      )}
+    </section>
+  </article>
+);
 
 export default CardListExample;

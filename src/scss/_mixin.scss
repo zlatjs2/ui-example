@@ -1,7 +1,7 @@
-/// 믹스인
+/**
+ * mixin style
+ */
 
-/// 이미지로 대체할 엘리먼트에 배경이미지를 설정하고
-/// 텍스트를 바깥으로 빼내어 보이지 않게 함
 @mixin ir-pm {
   display: block;
   overflow: hidden;
@@ -10,8 +10,6 @@
   text-indent: -9999px;
 }
 
-/// 이미지로 대체할 엘리먼트에 배경이미지를 설정하고
-/// z-index를 이용하여 글씨는 화면에 안보이게 처리
 @mixin ir-wa {
   display: block;
   overflow: hidden;

@@ -1,4 +1,7 @@
-/* reset css */
+/**
+ * reset style
+ */
+
 html,
 body,
 div,
@@ -63,4 +66,17 @@ img {
 em,
 i {
   font-style: normal;
+}
+textarea {
+  width: 100%;
+  margin: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: $spacing;
+  border: 1px solid $grey100;
+}
+textarea {
+  min-height: 100px;
+  resize: none;
+  outline: none;
 }

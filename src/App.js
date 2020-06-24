@@ -6,10 +6,8 @@ export default class App extends Component {
     return (
       <>
         <main className="container">
-          <CardListExample />
-
-          {/* <h3>폼 UI</h3>
-        <FormExample /> */}
+          {/* <CardListExample /> */}
+          <FormExample />
         </main>
       </>
     );
