@@ -46,7 +46,6 @@
 .card-item {
   display: inline-block;
   width: calc(50% - 8px);
-  min-height: 340px;
   overflow: hidden;
   box-sizing: border-box;
   margin: $spacing / 2;
@@ -129,7 +128,7 @@
   }
 }
 
-/// 폼
+// 폼
 .form {
   padding: $spacing * 2;
   @include element("item") {

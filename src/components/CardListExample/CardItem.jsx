@@ -4,6 +4,7 @@ import Rating from "../Rating/Rating.jsx";
 import common from "../../helpers/common.js";
 
 const CardItem = ({ title, label, hilight, price, comment, score, thumbnail, writer }) => {
+  console.log("### thumbnail: ", thumbnail);
   return (
     <li className="card-item">
       <Thumbnail url={thumbnail} className="card-item__thumbnail" alt="썸네일 이미지" />

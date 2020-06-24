@@ -19,6 +19,40 @@
   border-bottom: 1px solid #ddd;
 }
 
+.skip_navi {
+  position: absolute;
+  top: -99px;
+  left: 0;
+  background: #333;
+  color: #fff;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  z-index: 999;
+}
+
+.skip-navigation {
+  a {
+    position: absolute;
+    top: -99px;
+    left: 0;
+    background: #333;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    z-index: 999;
+    &:hover,
+    &:focus,
+    &:active {
+      display: block;
+      top: 0;
+    }
+  }
+}
+
 .nav {
   display: flex;
   justify-content: center;

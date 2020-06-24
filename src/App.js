@@ -8,18 +8,18 @@ export default class App extends Component {
       <Router>
         <header className="header">
           <nav className="nav">
-            <NavLink exact to="/ui-example/" className="nav__link">
+            <NavLink exact to="/" className="nav__link">
               카드리스트 UI
             </NavLink>
-            <NavLink to="/ui-example/form" className="nav__link">
+            <NavLink to="/form" className="nav__link">
               폼 UI
             </NavLink>
           </nav>
         </header>
         <main className="container">
           <Switch>
-            <Route exact path="/ui-example/" component={CardListExample} />
-            <Route path="/ui-example/form" component={FormExample} />
+            <Route exact path="/" component={CardListExample} />
+            <Route path="/form" component={FormExample} />
           </Switch>
         </main>
       </Router>
