@@ -19,6 +19,7 @@ UI 예제 테스트
 - babel-loader: 바벨과 웹팩을 이용해 자바스크립트 파일을 트랜스파일링 해줌
 - html-webpack-plugin: 웹팩 번들에 html파일을 제공
 - css-loader: css 파일을 import OR require 할 수 있게 해주는 라이브러리
+- url-loader: 이미지나 폰트 파일을 인라인화 해주는 라이브러리
 - webpack: 웹팩을 사용하기 위한 필수 라이브러리
 - webpack-cli: 웹팩 커맨드라인 인터페이스
 - webpack-dev-server: 웹팩 개발서버 라이브러리

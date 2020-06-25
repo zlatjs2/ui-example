@@ -2,10 +2,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: "./src/index.js", // 리액트 파일이 시작하는 곳(webpack4부터 생략가능 === 기본이 ./src/index.js)
+  entry: "./src/index.js",
   output: {
     path: __dirname + "/build",
-    filename: "bundle.[hash].js", // [hash]는 컴파일될 때마다 웹팩에서 생성된 해시로 변경해주어 캐싱에 도움
+    filename: "bundle.[hash].js",
   },
   module: {
     rules: [
@@ -24,7 +24,7 @@ module.exports = {
           {
             loader: "url-loader",
             options: {
-              limit: 8000,
+              limit: 1000,
               name: "[hash]-[name].[ext]",
               publicPath: "/",
             },
@@ -45,7 +45,5 @@ module.exports = {
   devServer: {
     host: "localhost",
     port: 8080,
-    open: true,
-    historyApiFallback: true,
   },
 };

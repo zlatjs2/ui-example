@@ -16,7 +16,7 @@ const FormExample = () => {
     <article>
       <h2 className="sc-out">Form UI 페이지</h2>
       <section>
-        <h3 className="page-title">Form UI</h3>
+        <h3 className="page-title">Form Example</h3>
         <form className="form" onSubmit={onSubmit}>
           <fieldset>
             <legend className="sc-out">폼 예제</legend>
